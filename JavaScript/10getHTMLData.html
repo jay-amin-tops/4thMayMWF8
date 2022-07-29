@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <input onkeypress="getdata()" type="text" name="inp-name" class="inp-class" id="inp-id"> -->
+    <!-- <input onkeydown="getdata()" type="text" name="inp-name" class="inp-class" id="inp-id"> -->
+    <input onkeyup="getdata()" type="text" name="inp-name" class="inp-class" id="inp-id">
+    <script>
+        function getdata() {
+            // var Data = document.getElementById("inp-id")
+            // console.log(Data);
+            // console.log(Data.value);
+            
+            // var Data = document.getElementsByClassName("inp-class")
+            // console.log(Data);
+            // console.log(Data[0]);
+            // console.log(Data[0].value);
+
+            // var Data = document.getElementsByName("inp-name")
+            // console.log(Data);
+            // console.log(Data[0]);
+            // console.log(Data[0].value);
+
+            var Data = document.getElementsByTagName("input")
+            console.log(Data);
+            console.log(Data[0]);
+            console.log(Data[0].value);
+            // console.log("called");
+        }
+    </script>
+</body>
+</html>

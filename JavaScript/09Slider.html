@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="slider">
+        <img class="slider-img" src="assignmentop.jpg" alt="">
+        <img class="slider-img" src="Boolean Operators.PNG" alt="">
+        <img class="slider-img" src="Events in Javascript.png" alt="">
+        <img class="slider-img" src="JavaScript-Arithmatic-Operators.png" alt="">
+        <img class="slider-img" src="ternalry.png" alt="">
+    </div>
+
+    <script>
+        var SliderImgs = document.getElementsByClassName('slider-img');
+        var counter = 0;
+        function Slider() {
+            console.log("calling function");    
+            for (let index = 0; index < SliderImgs.length; index++) {
+                // console.log("called");
+                // console.log(SliderImgs[index]);
+                SliderImgs[index].style.display = "none"
+            }
+            counter++;
+            SliderImgs[counter].style.display = "block"
+        }
+        Slider()
+        setInterval(Slider, 3000);
+
+    </script>
+
+</body>
+</html>
