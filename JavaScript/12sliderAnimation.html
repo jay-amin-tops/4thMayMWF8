@@ -5,8 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .slider-effect{
+            animation: slider-effect 2s;
+        }
+        @keyframes slider-effect{
+            to{
+                transform: translate(0%);
+            }
+            from{
+                transform: translate(100%);
+
+            }
+        }
+    </style>
 </head>
 <body>
+    <!-- <img class="slider-effect" src="assignmentop.jpg" alt=""> -->
     <div class="slider">
         <img class="slider-img" src="assignmentop.jpg" alt="">
         <img class="slider-img" src="Boolean Operators.PNG" alt="">
@@ -30,10 +45,14 @@
             }
             // console.log(counter);
             SliderImgs[counter].style.display = "block"
+            SliderImgs[counter].classList.add("slider-effect")
+            // ActiveImgClassList = SliderImgs[counter].classList
+            // console.log(ActiveImgClassList);
+            // slider-effect
             counter++;
         }
         // Slider()
-        setInterval(Slider, 1000);
+        setInterval(Slider, 2000);
 
     </script>
 

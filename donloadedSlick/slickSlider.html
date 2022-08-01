@@ -1,0 +1,73 @@
+<html>
+
+<head>
+    <title>My Now Amazing Webpage</title>
+
+    <style>
+        .slick-slider .element {
+            height: 100px;
+            width: 100px;
+            background-color: #000;
+            color: #fff;
+            border-radius: 5px;
+            display: inline-block;
+            margin: 0px 10px;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            font-size: 20px;
+        }
+
+        .slick-slider .slick-disabled {
+            opacity: 0;
+            pointer-events: none;
+        }
+    </style>
+    <link rel="stylesheet" href="slick.css"></head>
+    <script src="jquery.min.js"></script>
+    <script src="slick.js"></script>
+<body>
+
+    <div class="slick-slider">
+        <div class="element element-1">1</div>
+        <div class="element element-2">2</div>
+        <div class="element element-3">3</div>
+        <div class="element element-4">4</div>
+        <div class="element element-5">4</div>
+        <div class="element element-6">6</div>
+        <div class="element element-7">7</div>
+        <div class="element element-8">8</div>
+        <div class="element element-9">9</div>
+        <div class="element element-10">10</div>
+    </div>
+    <div data-slick='{"slidesToShow": 4, "slidesToScroll": 4}'>
+        <div><h3>1</h3></div>
+        <div><h3>2</h3></div>
+        <div><h3>3</h3></div>
+        <div><h3>4</h3></div>
+        <div><h3>5</h3></div>
+        <div><h3>6</h3></div>
+      </div>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".slick-slider").slick({
+                slidesToShow: 3,
+                infinite: false,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 2000
+                // dots: false, Boolean
+                // arrows: false, Boolean
+            });
+        });
+    </script>
+
+</body>
+
+</html>
