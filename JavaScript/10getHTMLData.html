@@ -9,27 +9,34 @@
 <body>
     <!-- <input onkeypress="getdata()" type="text" name="inp-name" class="inp-class" id="inp-id"> -->
     <!-- <input onkeydown="getdata()" type="text" name="inp-name" class="inp-class" id="inp-id"> -->
-    <input onkeyup="getdata()" type="text" name="inp-name" class="inp-class" id="inp-id">
+    <!-- <input onkeyup="getdata()" type="text" name="inp-name" class="inp-class" id="inp-id"> -->
+    <input onkeyup="getdata(this)" type="text" name="inp-name" class="inp-class" id="inp-id">
     <script>
-        function getdata() {
-            // var Data = document.getElementById("inp-id")
-            // console.log(Data);
-            // console.log(Data.value);
+        // function getdata() {
+        //     // var Data = document.getElementById("inp-id")
+        //     // console.log(Data);
+        //     // console.log(Data.value);
             
-            // var Data = document.getElementsByClassName("inp-class")
-            // console.log(Data);
-            // console.log(Data[0]);
-            // console.log(Data[0].value);
+        //     // var Data = document.getElementsByClassName("inp-class")
+        //     // console.log(Data);
+        //     // console.log(Data[0]);
+        //     // console.log(Data[0].value);
 
-            // var Data = document.getElementsByName("inp-name")
-            // console.log(Data);
-            // console.log(Data[0]);
-            // console.log(Data[0].value);
+        //     // var Data = document.getElementsByName("inp-name")
+        //     // console.log(Data);
+        //     // console.log(Data[0]);
+        //     // console.log(Data[0].value);
 
-            var Data = document.getElementsByTagName("input")
-            console.log(Data);
-            console.log(Data[0]);
-            console.log(Data[0].value);
+        //     var Data = document.getElementsByTagName("input")
+        //     console.log(Data);
+        //     console.log(Data[0]);
+        //     console.log(Data[0].value);
+        //     // console.log("called");
+        // }
+        function getdata(kuchbhi) {
+            // var Data = document.getElementsByTagName("input")
+            console.log(kuchbhi);
+            console.log(kuchbhi.value);
             // console.log("called");
         }
     </script>
