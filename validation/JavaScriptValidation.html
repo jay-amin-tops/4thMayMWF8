@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+
+            background: linear-gradient(90deg,green,white);
+        }
+        .container{
+            max-width: calc(100wa-30wa);
+            max-width: 70%;
+            width: 100%;
+            text-align: center;
+            
+        }
+        h2{
+            font-size: 50px;
+            color: green;
+            margin: 20px;
+        }
+        p{
+            font-size: 20px;
+            margin: 20px;
+        }
+        .frm-group input{
+            width: 20rem;
+            padding: 15px;
+            margin: 5px 0 22px 0;
+            display: inline-block;
+            border: none;
+        }
+        .sub input{
+            margin: 15px;
+            width: 100px;
+            padding: 12px;
+            background-color: green;
+            border-radius: 15%;
+            
+        }
+        span{
+            color: red;
+            font-size: 20px;
+            
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <h2>Quick Inquiry</h2>
+            <p>Let's get the Conversation started. Fill the form below and we'll get in touch as soon as we can.</p>
+
+            <form name="myForm" action="#" onsubmit="return validateForm()" method="post">
+              <div class="frm-group">
+                   <input type="text" name="fname" onblur="validateForm(this,'t11')" id="t1" placeholder="First Name" required><br>
+                  <span id="t11"> </span>
+              </div>
+              <div class="frm-group">
+                <input type="text" name="flast" id="t2" onblur="validateForm(this,'t22')" placeholder="Last Name" required><br>
+                  <span id="t22"> </span>
+              </div>
+              <div class="frm-group">
+                 <input type="text" name="femail" id="t3" onblur="validateForm(this,'t33')" placeholder="Your Email ID" required><br>
+              <span id="t33"> </span>
+              </div>
+              <div class="frm-group">
+                 <input type="text" name="fcountry" id="t4" onblur="validateForm(this,'t44')" placeholder="Country" required><br>
+              <span id="t44"> </span>
+              </div>
+              <div class="frm-group">
+                 <input type="text" name="fcode" id="t5" onblur="validateForm(this,'t55')" placeholder="Code" required><br>
+              <span id="t55"> </span>
+              </div>
+              <div class="frm-group">
+                 <input type="text" name="fnumber" onblur="checknumber(this.value,'t66')" id="t6" placeholder="Phone Number" required><br>
+                 <!-- <input type="text" name="fnumber" onkeyup="checknumber(this.value,'t66')" id="t6" onblur="validateForm(this,'spnchecknumerror')" placeholder="Phone Number" required><br> -->
+              <span id="t66"> </span>
+              <span id="spnchecknumerror"> </span>
+              </div>
+              <div class="frm-group">
+                 <input type="text" name="fcompany" id="t7" onblur="validateForm(this,'t77')" placeholder="Pasword" required><br>
+              <span id="t77"> </span>
+              </div>
+              <div class="sub">
+                <input type="submit" value="Submit">
+            
+              </div>
+            </form>
+        </div>
+    </div>
+    <script>
+        function validateForm(e,spnid) {
+            if (e.value == "") {
+                document.getElementById(spnid).innerHTML = "This field is required!!"
+            } else {
+                document.getElementById(spnid).innerHTML = ""                
+            }
+        }
+        function checknumber(e,spnid) {
+            var filter = /^([0-9]{10})+$/;
+            // console.log(filter.test(e));
+            if (e == "") {
+                document.getElementById(spnid).innerHTML = "This field is required!!"
+            } else {
+                document.getElementById(spnid).innerHTML = ""                
+                if (!filter.test(e)) {
+                    document.getElementById(spnid).innerHTML = "Invalid Mobile Number"
+                } else {
+                    document.getElementById(spnid).innerHTML = ""                
+                }
+            }
+        }
+
+        </script>
+</body>
+</html>
