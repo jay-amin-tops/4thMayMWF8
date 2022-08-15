@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .my-class {
+            background-color: teal;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    
+</head>
+
+<body>
+    <p class="my-class">Something</p>
+    <button id="btn-click">Click</button>
+    <button onclick="clickchangeclass()">Toggle</button>
+    <script>
+        function clickchangeclass(params) {
+            $('p').toggleClass('my-class')
+        }
+        $("#btn-click").click(function () {
+            // console.log("called");
+            console.log($('p').hasClass('my-class'));
+            if ($('p').hasClass('my-class')) {
+                $('p').removeClass('my-class')
+            } else {
+                $('p').addClass('my-class')
+            }
+        })
+    </script>
+</body>
+
+</html>
